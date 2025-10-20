@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "TradingAgent"
+version = "0.1.0"
+description = "Set of modules for trading"
+authors = ["Braian Desia"]
+readme = "README.md"
+
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.15"
+numpy = ">=2.3.2,<3.0.0"
+matplotlib = ">=3.10.6,<4.0.0"
+pandas = ">=2.3.2,<3.0.0"
+scipy = ">=1.16.1,<2.0.0"
+yfinance = ">=0.2.65,<0.3.0"
+gymnasium = ">=0.28.1,<0.30"
+stable-baselines3 = ">=2.2.1,<2.3.0"
+torch = {version = "2.6.0+cpu", source = "pytorch-cpu"}
+imitation = "^1.0.1"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.30.1"
+jupyter = "^1.1.1"
+
+[[tool.poetry.source]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "supplemental"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
+
